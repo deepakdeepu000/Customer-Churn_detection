@@ -204,7 +204,7 @@ df.isna().sum()
 
 **output:**
 
-![Example Output](/Results and outputs/output1.png)
+![Example Output](Images/output1.png)
 
 ## Model Training and Testing
 
@@ -379,7 +379,7 @@ plt.show()
 
 ```
 
-![Validation](Results and outputs/Visualization1.png)
+![Validation](Images/Visualization1.png)
 
 # Learning rate hypertuning
 
@@ -430,7 +430,7 @@ plt.plot(n_estimators, accuracies, 'g')
 plt.grid()
 ```
 
-![Validation](Results and outputs\(Visualization3.png)
+![Validation](Images/Visualization3.png)
 
 
 
@@ -461,15 +461,15 @@ Test accuracy:  98.84547069271758 %
 
 This chart helps us understand the proportion of males and females in our dataset. Each slice of the pie represents the percentage of each gender among the customers.
 
-![Results](Result1.png)
+![Results](Images/Result1.png)
 
 This chart shows how churn rates (i.e., the number of customers who have canceled) differ between genders. Each bar represents a gender, and the colors (red for churned and green for not churned) show how many customers of each gender have churned or not.
 
-![Results](Result2.png)
+![Results](Images/Result2.png)
 
  This chart shows how different types of products are associated with churn. Each bar represents a type of product, and the colors (red for churned and green for not churned) indicate how many customers who used that product type have churned or not.
  
-![Results](Result3.png)
+![Results](Images/Result3.png)
 
 
 
