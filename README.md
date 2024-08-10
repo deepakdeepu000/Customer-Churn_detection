@@ -346,7 +346,6 @@ Test accuracy:  98.3126110124334 %
 ```
 
 
-
 ## Hyperparameter Tuning and Visualization
 
 ### Tuning the Model
@@ -372,9 +371,37 @@ plt.ylabel("Test Accuracy")
 plt.grid(True)
 plt.show()
 
-```
+``'
 
 ![Validation](Images/Visualization1.png)
+
+
+
+# Max depth hypertuning (Decision Tree)
+
+```
+max_depth = []
+accuracies = []
+
+for i in range(4, 30, 2):
+    grid = {'max_depth': i}
+    clf = DecisionTreeClassifier(random_state=42)
+    clf.set_params(**grid)
+    accuracy = train_and_test(X, y, clf, test_size, False)
+    
+    max_depth.append(i)
+    accuracies.append(accuracy)
+
+plt.title("Max Depth hypertuning")
+plt.xlabel("DecisionTreeClassifier Max Depth")
+plt.ylabel("Test Accuracy")
+plt.plot(max_depth, accuracies, 'b')
+plt.grid()
+plt.show()
+```
+
+![Validation](Images/Decision Tree.png)
+
 
 # Learning rate hypertuning
 
