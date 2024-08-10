@@ -18,18 +18,13 @@ This project aims to predict customer churn using various machine learning model
 customer_churn_detection/
 │
 ├── data/
-│   └── churn_data.csv
+│   └── E Commerce Dataset.xlsx
 │
-├── src/
-│   ├── churn_detection.py
-│   └── utils.py
+├── Images/
 │
-├── images/
-│   └── feature_importance.png
-│
+├── Customer-Churn-detection.py
 ├── README.md
-├── requirements.txt
-└── LICENSE
+└── requirements.txt
 ```
 
 - `data/`: Directory containing the dataset.
@@ -112,7 +107,7 @@ Here, we loaded the dataset into a Pandas DataFrame. This allowed us to look at 
 
 ```
 # Load the dataset
-df = pd.read_excel("./data/E Commerce Dataset.xlsx", sheet_name=1)
+df = pd.read_excel("data/E Commerce Dataset.xlsx", sheet_name=1)
 df.head()
 
 ```
@@ -204,7 +199,7 @@ df.isna().sum()
 
 **output:**
 
-![Example Output](/Results and outputs/output1.png)
+![Example Output](Images/output1.png)
 
 ## Model Training and Testing
 
@@ -317,7 +312,6 @@ print("========================== XGBClassifier ==========================")
 model = train_and_test(X, y, XGBClassifier(), test_size)
 ```
 **output**:
-
 ```
 ========================== Logistic Classifier ==========================
 Train confusion matrix:
@@ -351,7 +345,6 @@ Test accuracy:  98.3126110124334 %
 ```
 
 
-
 ## Hyperparameter Tuning and Visualization
 
 ### Tuning the Model
@@ -379,7 +372,35 @@ plt.show()
 
 ```
 
-![Validation](Results and outputs/Visualization1.png)
+![Validation](Images/Visualization1.png)
+
+
+
+# Max depth hypertuning (Decision Tree)
+
+```
+max_depth = []
+accuracies = []
+
+for i in range(4, 30, 2):
+    grid = {'max_depth': i}
+    clf = DecisionTreeClassifier(random_state=42)
+    clf.set_params(**grid)
+    accuracy = train_and_test(X, y, clf, test_size, False)
+    
+    max_depth.append(i)
+    accuracies.append(accuracy)
+
+plt.title("Max Depth hypertuning")
+plt.xlabel("DecisionTreeClassifier Max Depth")
+plt.ylabel("Test Accuracy")
+plt.plot(max_depth, accuracies, 'b')
+plt.grid()
+plt.show()
+```
+
+![Validation](Images/Decision_Tree.png)
+
 
 # Learning rate hypertuning
 
@@ -405,7 +426,7 @@ plt.grid()
 
 ```
 
-![Validation](/Results and outputs/Visualization2.png)
+![Validation](/Images/Visualization2.png)
 
 
 # Number of estimators hypertuning
@@ -430,7 +451,7 @@ plt.plot(n_estimators, accuracies, 'g')
 plt.grid()
 ```
 
-![Validation](Results and outputs\(Visualization3.png)
+![Validation](Images/Visualization3.png)
 
 
 
@@ -461,15 +482,15 @@ Test accuracy:  98.84547069271758 %
 
 This chart helps us understand the proportion of males and females in our dataset. Each slice of the pie represents the percentage of each gender among the customers.
 
-![Results](Result1.png)
+![Results](Images/Result1.png)
 
 This chart shows how churn rates (i.e., the number of customers who have canceled) differ between genders. Each bar represents a gender, and the colors (red for churned and green for not churned) show how many customers of each gender have churned or not.
 
-![Results](Result2.png)
+![Results](Images/Result2.png)
 
  This chart shows how different types of products are associated with churn. Each bar represents a type of product, and the colors (red for churned and green for not churned) indicate how many customers who used that product type have churned or not.
  
-![Results](Result3.png)
+![Results](Images/Result3.png)
 
 
 
