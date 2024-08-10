@@ -379,7 +379,7 @@ plt.show()
 
 ```
 
-![Validation](/Results and outputs/Visualization1.png)
+![Validation](Results and outputs/Visualization1.png)
 
 # Learning rate hypertuning
 
