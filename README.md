@@ -18,18 +18,13 @@ This project aims to predict customer churn using various machine learning model
 customer_churn_detection/
 │
 ├── data/
-│   └── churn_data.csv
+│   └── E Commerce Dataset.xlsx
 │
-├── src/
-│   ├── churn_detection.py
-│   └── utils.py
+├── Images/
 │
-├── images/
-│   └── feature_importance.png
-│
+├── Customer-Churn-detection.py
 ├── README.md
-├── requirements.txt
-└── LICENSE
+└── requirements.txt
 ```
 
 - `data/`: Directory containing the dataset.
@@ -112,7 +107,7 @@ Here, we loaded the dataset into a Pandas DataFrame. This allowed us to look at 
 
 ```
 # Load the dataset
-df = pd.read_excel("./data/E Commerce Dataset.xlsx", sheet_name=1)
+df = pd.read_excel("data/E Commerce Dataset.xlsx", sheet_name=1)
 df.head()
 
 ```
