@@ -405,7 +405,7 @@ plt.grid()
 
 ```
 
-![Validation](/Results and outputs/Visualization2.png)
+![Validation](/Images/Visualization2.png)
 
 
 # Number of estimators hypertuning
