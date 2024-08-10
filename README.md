@@ -399,7 +399,7 @@ plt.grid()
 plt.show()
 ```
 
-![Validation](Images/Decision Tree.png)
+![Validation](Images/Decision_Tree.png)
 
 
 # Learning rate hypertuning
