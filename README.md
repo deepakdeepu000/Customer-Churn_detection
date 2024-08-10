@@ -204,7 +204,7 @@ df.isna().sum()
 
 **output:**
 
-![Example Output](output1.png)
+![Example Output](/Results and outputs/output1.png)
 
 ## Model Training and Testing
 
@@ -379,7 +379,7 @@ plt.show()
 
 ```
 
-![Validation](Visualization1.png)
+![Validation](Results and outputs/Visualization1.png)
 
 # Learning rate hypertuning
 
@@ -405,7 +405,7 @@ plt.grid()
 
 ```
 
-![Validation](Visualization2.png)
+![Validation](/Results and outputs/Visualization2.png)
 
 
 # Number of estimators hypertuning
@@ -430,7 +430,7 @@ plt.plot(n_estimators, accuracies, 'g')
 plt.grid()
 ```
 
-![Validation](Visualization3.png)
+![Validation](Results and outputs\(Visualization3.png)
 
 
 
