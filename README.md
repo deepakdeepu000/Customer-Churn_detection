@@ -312,7 +312,6 @@ print("========================== XGBClassifier ==========================")
 model = train_and_test(X, y, XGBClassifier(), test_size)
 ```
 **output**:
-
 ```
 ========================== Logistic Classifier ==========================
 Train confusion matrix:
@@ -371,7 +370,7 @@ plt.ylabel("Test Accuracy")
 plt.grid(True)
 plt.show()
 
-``'
+```
 
 ![Validation](Images/Visualization1.png)
 
